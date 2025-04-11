@@ -1,0 +1,308 @@
+.aws-loading {
+    position: relative;
+    opacity: 0.7;
+}
+.aws-loading:after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: aws-spin 1s linear infinite;
+    margin-left: 8px;
+}
+@keyframes aws-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Base responsive styles */
+.aws-admin-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .aws-admin-container {
+        flex-direction: row;
+    }
+    
+    .aws-sliders-list {
+        flex: 0 0 300px;
+    }
+    
+    .aws-slider-editor {
+        flex: 1;
+    }
+}
+
+/* Mobile-friendly form elements */
+.aws-form-group {
+    margin-bottom: 15px;
+}
+
+.aws-slide {
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+/* Touch-friendly buttons */
+.aws-upload-image,
+.aws-remove-slide {
+    padding: 8px 12px;
+    min-height: 36px;
+}
+
+/* Responsive table */
+@media (max-width: 782px) {
+    .aws-sliders-table table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+
+/* Base Styles */
+.aws-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.aws-slider-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.aws-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.aws-slide-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 80vh;
+    object-fit: cover;
+}
+
+.aws-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+}
+
+.aws-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ccc;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.aws-dot.active {
+    background-color: #117A7A;
+}
+
+/* Full width adjustments */
+.aws-desktop-slider {
+    max-width: 100%;
+}
+
+.aws-desktop-slider .aws-slide-image {
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+    .aws-slide-image {
+        max-height: 60vh;
+    }
+    
+    .aws-dot {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+/* Utility Classes */
+.d-block {
+    display: block !important;
+}
+
+.d-none {
+    display: none !important;
+}
+
+@media (min-width: 768px) {
+    .d-md-block {
+        display: block !important;
+    }
+    
+    .d-md-none {
+        display: none !important;
+    }
+}
+
+
+/* Animation Types */
+.aws-slider.aws-fade-animation .aws-slider-inner {
+    transform: none !important;
+}
+
+.aws-slider.aws-fade-animation .aws-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.aws-slider.aws-fade-animation .aws-slide[aria-hidden="false"] {
+    position: relative;
+    opacity: 1;
+}
+
+/* Navigation Arrows */
+.aws-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.aws-arrow:hover {
+    opacity: 1;
+}
+
+.aws-prev-arrow {
+    left: 15px;
+}
+
+.aws-next-arrow {
+    right: 15px;
+}
+
+/* Focus styles for accessibility */
+.aws-arrow:focus,
+.aws-dot:focus {
+    outline: 2px solid #2271b1;
+    outline-offset: 2px;
+}
+
+.aws-slide:focus {
+    outline: 2px dashed #2271b1;
+    outline-offset: -2px;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .aws-slider-inner,
+    .aws-slider.aws-fade-animation .aws-slide {
+        transition: none !important;
+    }
+}
+
+
+/* Animation Types */
+.aws-slider.aws-fade-animation .aws-slider-inner {
+    transform: none !important;
+}
+
+.aws-slider.aws-fade-animation .aws-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.aws-slider.aws-fade-animation .aws-slide[aria-hidden="false"] {
+    position: relative;
+    opacity: 1;
+}
+
+/* Navigation Arrows */
+.aws-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.aws-arrow:hover {
+    opacity: 1;
+}
+
+.aws-prev-arrow {
+    left: 15px;
+}
+
+.aws-next-arrow {
+    right: 15px;
+}
+
+/* Focus styles for accessibility */
+.aws-arrow:focus,
+.aws-dot:focus {
+    outline: 2px solid #2271b1;
+    outline-offset: 2px;
+}
+
+.aws-slide:focus {
+    outline: 2px dashed #2271b1;
+    outline-offset: -2px;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .aws-slider-inner,
+    .aws-slider.aws-fade-animation .aws-slide {
+        transition: none !important;
+    }
+}

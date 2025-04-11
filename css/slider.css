@@ -1,0 +1,185 @@
+/* Base Styles */
+.headtop {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+}
+
+.VueCarousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.VueCarousel-wrapper {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.VueCarousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    flex-wrap: nowrap;
+}
+
+.VueCarousel-slide {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    background-color: transparent;
+    flex-shrink: 0;
+}
+
+.VueCarousel-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: contain;
+    object-position: center;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.shimmerBgColor {
+    background-color: transparent;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.img-h-auto {
+    height: auto;
+}
+
+.img-auto {
+    max-width: 100%;
+    height: auto;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.prelative {
+    position: relative;
+    overflow: hidden;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+/* Pagination Styles */
+.VueCarousel-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.VueCarousel-dot-container {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+.VueCarousel-dot {
+    border: none;
+    border-radius: 50%;
+    padding: 7px;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #EFEFEF;
+}
+
+.VueCarousel-dot--active {
+    background-color: #117A7A;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .prelative {
+        min-height: auto;
+    }
+
+    .headtop {
+        padding-bottom: 0.3rem;
+    }
+
+    .VueCarousel-dot-container {
+        margin-top: 2px;
+    }
+
+    .VueCarousel-dot {
+        padding: 1px;
+        width: 6px;
+        height: 6px;
+        background-color: #979A9F;
+    }
+
+    .VueCarousel-dot--active {
+        background-color: #000;
+    }
+
+    .VueCarousel-slide img {
+        max-height: 400px;
+    }
+}
+
+/* Ensure only one slider is visible at a time */
+.d-block {
+    display: block !important;
+}
+
+.d-none {
+    display: none !important;
+}
+
+@media (min-width: 768px) {
+    .d-md-block {
+        display: block !important;
+    }
+
+    .d-md-none {
+        display: none !important;
+    }
+}
+
+/* Animation */
+.customFade-active {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 480px) {
+    .home-background {
+        background-color: #f7f7f7;
+        box-sizing: border-box !important;
+        overflow-x: hidden;
+    }
+
+    .home-tiles {
+        background-color: #fff;
+    }
+}
+
+/* Tablet and larger screens */
+@media (min-width: 992px) {
+    .headtop .prelative {
+        min-height: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .headtop .prelative {
+        min-height: auto;
+    }
+}
